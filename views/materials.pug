@@ -1,0 +1,12 @@
+//- views/materials.pug
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each material in materials
+      li
+        strong= material.name
+        |  (Type: #{material.type})
+        |  — Entreprise: #{material.companyId.name}
